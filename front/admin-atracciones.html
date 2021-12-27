@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <!-- insert stylesheets here -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link href="css/all.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script defer src="js/admin.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light p-3 px-5">
+        <div class="d-flex col-12 col-md-3 col-lg-2 mb-2 mb-lg-0 flex-wrap flex-md-nowrap justify-content-between">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="logo" height="50">
+                Admin
+            </a>
+
+
+            <button class="navbar-toggler d-md-none collapsed mb-3" type="button" data-toggle="collapse"
+                data-target="#sidebar" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="col-12 col-md-5 col-lg-8 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-expanded="false">
+                    Hola, Sole
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="px-3 col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-md-5">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="admin.html">
+                                <i class="fas fa-home"></i>
+                                <span class="ml-2">Inicio</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="admin-usuarios.html">
+                                <i class="fas fa-users"></i>
+                                <span class="ml-2">Usuarios</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="admin-atracciones.html">
+                                <i class="fas fa-mountain"></i>
+                                <span class="ml-2">Atracciones</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-promociones.html">
+                                <i class="fas fa-route"></i>
+                                <span class="ml-2">Promociones</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-tipos.html">
+                                <i class="fas fa-shapes"></i>
+                                <span class="ml-2">Tipos</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="col-md-9 ml-sm-auto col-lg-10 px-md-5 py-4">
+                <h1 class="h2 text-center"><i class="fas fa-mountain"></i> Atracciones</h1>
+
+                <p class="text-center">Altas, bajas, modificaciones y consultas</p>
+                <br>
+                <div class="mb-3 text-right">
+                    <a href="/turismo/attractions/create.do" class="btn btn-primary" role="button"> <i
+                            class="fas fa-plus"></i> Nueva Atracción
+                    </a>
+                </div>
+                <table class="table table-striped table-hover">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Costo</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Cupo</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Minas Tirith</th>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore natus ad veritatis.
+                                Doloribus, tempora harum. Similique numquam ipsum a voluptas, deleniti ducimus eligendi
+                                ab recusandae amet quae esse nesciunt quibusdam?</td>
+                            <td scope="col">Aventura</th>
+                            <td class="text-center">20</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">50</td>
+                            <!--cambiar el href-->
+                            <td style="width: 11%">
+                                <a href="/turismo/attractions/edit.do?id=${attraction.id}"
+                                    class="btn btn-warning rounded" role="button"><i class="fas fa-pen"></i></a>
+                                <!--cambiar el href-->
+                                <a href="/turismo/attractions/delete.do?id=${attraction.id}"
+                                    class="btn btn-danger rounded" role="button"><i class="fas fa-trash-alt"></i></a>
+                                <!-- llama al modal
+                                <button type="button" name="button" class="btn-primary" onclick="confirmarEliminacion('{{id}}')"><i class="fas fa-trash"></i></button></td>
+                                -->
+                        </tr>
+                        <tr>
+                            <th scope="row">Minas Tirith</th>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore natus ad veritatis.
+                                Doloribus, tempora harum. Similique numquam ipsum a voluptas, deleniti ducimus eligendi
+                                ab recusandae amet quae esse nesciunt quibusdam?</td>
+                            <td scope="col">Degustación</th>
+                            <td class="text-center">20</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">50</td>
+                            <!--cambiar el href-->
+                            <td style="width: 11%">
+                                <a href="/turismo/attractions/edit.do?id=${attraction.id}"
+                                    class="btn btn-warning rounded" role="button"><i class="fas fa-pen"></i></a>
+                                <!--cambiar el href-->
+                                <a href="/turismo/attractions/delete.do?id=${attraction.id}"
+                                    class="btn btn-danger rounded" role="button"><i class="fas fa-trash-alt"></i></a>
+                                <!-- llama al modal
+                                <button type="button" name="button" class="btn-primary" onclick="confirmarEliminacion('{{id}}')"><i class="fas fa-trash"></i></button></td>
+                                -->
+                        </tr>
+                        <tr>
+                            <th scope="row">Minas Tirith</th>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore natus ad veritatis.
+                                Doloribus, tempora harum. Similique numquam ipsum a voluptas, deleniti ducimus eligendi
+                                ab recusandae amet quae esse nesciunt quibusdam?</td>
+                            <td scope="col">Paisaje</th>
+                            <td class="text-center">20</td>
+                            <td class="text-center">5</td>
+                            <td class="text-center">50</td>
+                            <!--cambiar el href-->
+                            <td style="width: 11%">
+                                <a href="/turismo/attractions/edit.do?id=${attraction.id}"
+                                    class="btn btn-warning rounded" role="button"><i class="fas fa-pen"></i></a>
+                                <!--cambiar el href-->
+                                <button class="btn btn-danger rounded" type="button" name="button"
+                                    onclick="confirmarEliminacion('${attraction.id}')" role="button"><i
+                                        class="fas fa-trash-alt"></i></button>
+                                <!-- llama al modal
+                                <button type="button" name="button" class="btn-primary" onclick="confirmarEliminacion('{{id}}')"><i class="fas fa-trash"></i></button></td>
+                                -->
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+                <!-- ================= MODAL ELIMINACION ================== -->
+                <div class="col-md-9 ml-sm-auto col-lg-10 px-md-5 py-4">
+                    <div class="modalEliminar .modal-sm modal " id="modalEliminar">
+                        <div class="modalContent">
+                            <input id="userId" type="hidden" value="">
+                            <p>¿Desea eliminar la atracción?</p>
+                            <br>
+                            <div class="">
+                                <button type="button" name="button" class="btn-rojo"
+                                    onclick="eliminarUsuario()">Eliminar</button>
+                                <button type="button" name="button" class="btn-cancelar"
+                                    onclick="cerrarModal()">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ================= FIN MODAL ELIMINACION ================== -->
+
+
+            </main>
+        </div>
+    </div>
+
+    <footer class="float-right px-5 py-5">
+        <span>Copyright © 2021 <a href="#">FreakisTeam</a></span>
+    </footer>
+
+</body>
+
+
+
+</html>

@@ -1,17 +1,5 @@
-# Eclipse
+.settings
+target
 .classpath
-.project
-.settings/
-
-# Intellij
-.idea/
-*.iml
-*.iws
-out/
-
-# Mac
-.DS_Store
-
-# Maven
-log/
-target/
+*.project
+*.springBeans

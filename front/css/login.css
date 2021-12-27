@@ -1,0 +1,85 @@
+/* Coded with love by Mutiullah Samim */
+:root {
+    --color-primary: #2e525e ;
+    --color-typeface: #242e2d;
+    --color-accent: #f0a041;
+    --color-background: #FEFAE0;
+    --color-background2: #FFF;
+    --color-accent2: rgb(233, 185, 88);
+}
+
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			background-color: var(--color-background);
+            /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(128, 121, 196, 0.25), rgba(99, 131, 106, 0.25)), url(/img/hero.jpg);
+    /* Set a specific height */
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+		}
+		.user_card {
+			height: 400px;
+			width: 350px;
+			margin-top: auto;
+			margin-bottom: auto;
+			background: rgba(233, 185, 88, 0.50);
+			position: relative;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			padding: 10px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 5px;
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: rgb(233, 185, 88, 0.50);
+			padding: 10px;
+			text-align: center;
+		}
+		.brand_logo {
+			height: auto;
+			width: 160px;
+			border-radius: 50%;
+		}
+		.form_container {
+			margin-top: 100px;
+		}
+		.login_btn {
+			width: 100%;
+			background: var(--color-primary) !important;
+			color: white !important;
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 2rem;
+		}
+		.input-group-text {
+			background:var(--color-primary) !important;
+			color: white !important;
+			border: 0 !important;
+			border-radius: 0.25rem 0 0 0.25rem !important;
+		}
+		.input_user,
+		.input_pass:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+			background-color:var(--color-primary) !important;
+		}

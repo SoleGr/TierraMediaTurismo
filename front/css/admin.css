@@ -1,0 +1,123 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    z-index: 100;
+    padding: 90px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    z-index: 99;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 11.5rem;
+        padding: 0;
+    }
+}
+
+.navbar {
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .1);
+}
+
+@media (min-width: 767.98px) {
+    .navbar {
+        top: 0;
+        position: sticky;
+        z-index: 999;
+    }
+}
+
+.sidebar .nav-link {
+    color: #333;
+}
+
+.sidebar .nav-link.active {
+    color: #0d6efd;
+}
+
+footer {
+
+    left: 50px;
+}
+
+
+#modalEliminar {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 20%;
+}
+
+.btn-close-modal {
+    cursor: pointer;
+    float: right;
+    background-color: grey;
+    border: 0px;
+    color: white;
+    padding: 7px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-cancelar {
+    border: 0px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: grey;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.btn-rojo {
+    border: 0px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: grey;
+    border-radius: 5px;
+    background-color: rgb(199, 13, 0);
+    cursor: pointer;
+    color: white;
+}
+
+.btn-verde {
+    border: 0px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: grey;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: rgb(68, 168, 68);
+    cursor: pointer;
+    color: white;
+}
+
+.btn-edit{
+    background-color: orange;
+    padding: 7px;
+  }
