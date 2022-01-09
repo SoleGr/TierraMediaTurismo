@@ -7,9 +7,7 @@ El presente trabajo es una aplicación web para un parque de atracciones cuya fi
 Se ofrecen las promociones y atracciones teniendo en cuenta la preferencia del usuario, el precio y la duración de la atracción/promoción.\
 Los usuarios administradores son los encargados de las altas, bajas y modificaciones de usuarios, atracciones y promociones (paquetes de atracciones).
 
-***
-
-## Tecnologías utilizadas:
+## Tecnologías utilizadas 💻
 * Java
 * SQLite
 * HTML
@@ -17,22 +15,18 @@ Los usuarios administradores son los encargados de las altas, bajas y modificaci
 * CSS
 * Bootstrap
 
-***
-
 ## Previews
 
 ## Modelo de dominio
 
 ![ModeloDeDominio](imagenes/Modelo_de_dominio.bmp?raw=true)
 
-***
-
 ## Modelo de datos
 
 ![DER](imagenes/Modelo_de_datos.png?raw=true)
 
-***
-## Instalación
+## Instalación 🧰
+
 Para correr una copia del proyecto en forma local seguir las siguientes instrucciones.
 
 1. Clonar el repositorio.
@@ -42,14 +36,13 @@ Para correr una copia del proyecto en forma local seguir las siguientes instrucc
 
 2. El repositorio incluye una base de datos SQLite de prueba. Se puede ingresar con:
 
-Usuario no administrador
+🧙‍♂️Usuario no administrador
   ```
     Usuario: Gandalf
     Contraseña: gandalf
 ```
-Usuario administrador    
+👷‍♀️Usuario administrador    
   ```
-   Administrador
     Usuario: Sam
     Contraseña: sam
 ```
